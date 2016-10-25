@@ -1,9 +1,9 @@
 activator:
-  build: activator
+  image: ingensi/play-framework
   volumes:
-   - ./modigen-v3/:/zeta
+   - ./modigen-v3/:/app
   ports:
-   - 8888:8888
+   - 9000:9000
   links:
    - db
 
