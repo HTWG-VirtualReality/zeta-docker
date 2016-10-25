@@ -6,6 +6,7 @@ activator:
    - 9000:9000
   links:
    - db
+  stdin_open: true
 
 db:
   image: mongo
