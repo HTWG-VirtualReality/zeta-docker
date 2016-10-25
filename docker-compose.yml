@@ -1,0 +1,15 @@
+activator:
+  build: activator
+  volumes:
+   - ./modigen-v3/:/zeta
+  ports:
+   - 8888:8888
+  links:
+   - db
+
+db:
+  image: mongo
+  volumes:
+   - ./mongo/:/data/db
+  ports:
+   - 27017:27017
