@@ -4,7 +4,7 @@ This project helps you to setup zeta.
 
 ## Setup
 
-First check this repository out. After that checkout the zeta/modigen repository. And copy it as modigen-v3 into zeta-docker. Also create a new folder named mongo in zeta-docker. Or you could just adjust the docker-compose.yml and write in your own paths.
+First check this repository out. After that checkout the zeta/modigen repository. And copy it as modigen-v3 into zeta-docker or you could just adjust the docker-compose.yml and write in your own paths.
 
 Besides these step you should also have ```docker``` and ```docker-compose``` installed.
 
