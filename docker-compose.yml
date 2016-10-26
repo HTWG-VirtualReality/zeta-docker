@@ -4,9 +4,8 @@ activator:
    - ./modigen-v3/:/app
   ports:
    - 9000:9000
-  links:
-   - db
   stdin_open: true
+  net: "host"
 
 db:
   image: mongo
