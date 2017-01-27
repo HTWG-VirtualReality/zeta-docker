@@ -9,11 +9,13 @@ services:
     ports:
      - 9000:9000
     stdin_open: true
-    network_mode: "host"
+    links:
+     - db
+    command: ["activator", "-Dmongodb.ip=db", "run"]
 
   db:
     image: mongo
     volumes:
-     - ./mongo/:/data/db
+     - ./mongo:/data/db
     ports:
-     - 27017:27017
+     - localhost:27017:27017
