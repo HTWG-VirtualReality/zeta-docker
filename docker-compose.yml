@@ -1,15 +1,17 @@
-activator:
-  image: ingensi/play-framework
-  volumes:
-   - ./modigen-v3/:/app
-  ports:
-   - 9000:9000
-  stdin_open: true
-  net: "host"
+version: '2'
+services:
+  activator:
+    image: ingensi/play-framework
+    volumes:
+     - ./modigen-v3/:/app
+    ports:
+     - 9000:9000
+    stdin_open: true
+    network_mode: "host"
 
-db:
-  image: mongo
-  volumes:
-   - ./mongo/:/data/db
-  ports:
-   - 27017:27017
+  db:
+    image: mongo
+    volumes:
+     - ./mongo/:/data/db
+    ports:
+     - 27017:27017
