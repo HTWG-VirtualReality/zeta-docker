@@ -3,7 +3,9 @@ services:
   activator:
     image: ingensi/play-framework
     volumes:
-     - ./modigen-v3/:/app
+     - ./modigen-v3:/app
+     - ./sbt:/root/.sbt
+     - ./cache:/root/.ivy2/cache
     ports:
      - 9000:9000
     stdin_open: true
