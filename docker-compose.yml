@@ -7,7 +7,7 @@ services:
      - ./sbt:/root/.sbt
      - ./cache:/root/.ivy2/cache
     ports:
-     - 9000:9000
+     - localhost:9000:9000
     stdin_open: true
     links:
      - db
