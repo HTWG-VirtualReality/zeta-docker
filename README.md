@@ -20,3 +20,8 @@ Besides these step you should also have ```docker``` and ```docker-compose``` in
 ## Usage
 
 Just execute ```docker-compose up``` within zeta-docker folder and the containers gets started. Only at the first execution it will take very long (ca. 20-30 min) for retrieving all dependencies.
+
+## Login
+
+Automatic created users with their passwords can be found in```modigen-v3/server/app/models/SecureSocialUser.scala```.
+Call http://localhost:9000/oauth/setup after the first login to create necessary oauth credentials.
