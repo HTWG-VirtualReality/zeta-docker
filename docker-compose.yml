@@ -11,7 +11,7 @@ services:
     stdin_open: true
     links:
      - db
-    command: ["activator", "-Dmongodb.ip=db", "run"]
+    command: ["activator", "-Dmongodb.ip=db", "-Dmongodb.uri=mongodb://db:27017/modigen_v3", "run"]
 
   db:
     image: mongo
