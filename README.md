@@ -10,9 +10,9 @@ First check this repository out. After that checkout the zeta/modigen repository
 git clone https://github.com/HTWG-VirtualReality/zeta-docker.git
 cd zeta-docker
 git clone https://bitbucket.org/mgerhart/modigen-v3.git
-cd modigen-v3
-git fetch && git checkout vr-editor
-cd ../
+cd modigen-v3/server/public
+git clone https://github.com/HTWG-VirtualReality/prototyp.git
+docker run -it --rm -v "$PWD/prototyp":/usr/src/app -w /usr/src/app node:6 /bin/bash -c "npm install -g bower; bower install --allow-root"
 ```
 
 Besides these step you should also have ```docker``` and ```docker-compose``` installed.
